@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Wallet.css">
+    <link rel="stylesheet" href="https://cdn.moyasar.com/mpf/1.10.0/moyasar.css" />
+    <!-- Moyasar Scripts -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=fetch"></script>
+    <script src="https://cdn.moyasar.com/mpf/1.10.0/moyasar.js"></script>
+    <style>
+        .mysr-form-footer {
+            display: none !important
+        }
+
+        .mainItem {
+            display: flex;
+            align-items: center;
+        }
+
+        #mysr-form-form-el#mysr-form-form-el#mysr-form-form-el.mysr-form-moyasarForm[payment-form=true] .mysr-form-label,
+        #mysr-form-form-el#mysr-form-form-el#mysr-form-form-el.mysr-form-moyasarForm[payment-form=true] label.mysr-form-label {
+            font-family: var(--font);
+            font-weight: bold
+        }
+
+        @media screen and (min-width: 768px) {
+            #mysr-form-form-el#mysr-form-form-el#mysr-form-form-el.mysr-form-moyasarForm.mysr-form-fixedWidth {
+                max-width: 395px !important;
+            }
+        }
+
+        #mysr-form-form-el#mysr-form-form-el#mysr-form-form-el.mysr-form-moyasarForm[payment-form=true] .mysr-form-button,
+        .mainbtn {
+            background-color: #03767d !important;
+            border-color: #03767d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container ">
+        <header>
+            <div class="d-flex align-items-center pt-5">
+                <img src="./images/d-avatar.jpg" class="rounded-circle mx-3" width="50" height="50" alt="">
+                <h1 class="text-light">احمد محمد جمعة</h1>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="mx-3 my-4 text-light" style="font-size: 29px;">الرصيد المتوفر
+                    <span class="d-block" style="font-weight: bold;">5000 SAR</span>
+                </p>
+                <img src="./images/ic_launcher.png" width="150" height="120" alt="">
+            </div>
+        </header>
+        <div class="wrapper">
+            <div class="app-wrapper">
+                <content class="transactions-wrapper">
+                    <div class="row row4">
+                        <h3>شحن المحفظة</h3>
+                    </div>
+                    <div class="mysr-form"></div>
+                </content>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        Moyasar.init({
+            element: '.mysr-form',
+            language: 'ar',
+            amount: 50 * 100,
+            currency: 'SAR',
+            description: 'شحن المحفظة',
+            publishable_api_key: 'pk_test_j8V7xRhkLmh3joiufbG1thNL7K7HEEd5oRfTGXua',
+            callback_url: 'https://creen-program.com/services/success/3%2F5',
+            supported_networks: ['mada', 'visa', 'mastercard'],
+            methods: ['creditcard']
+
+        })
+    </script>
+</body>
+
+</html>
